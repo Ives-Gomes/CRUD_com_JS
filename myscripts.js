@@ -1,8 +1,8 @@
 let selectedRow = null;
 
 function clique() {
-    if(primeiro.length == 0 || segundo.length == 0 || terceiro.length == 0 
-        || quarto.length == 0 || quinto.length == 0) {
+    if(primeiro.value == "" ||  segundo.value == "" || terceiro.value == "" 
+       || quarto.value == "" || quinto.value == "") {
             alert("DADOS INCOMPLETOS!  PREENCHA CORRETAMENTE!");
     }
     else{
@@ -39,11 +39,11 @@ function inserir(formData) {
     let cell5 = row.insertCell();
     let cell6 = row.insertCell();
 
-    cell1.innerHTML = formData.primeiro;
-    cell2.innerHTML = formData.segundo;
-    cell3.innerHTML = formData.terceiro;
-    cell4.innerHTML = formData.quarto;
-    cell5.innerHTML = formData.quinto;
+    cell1.innerText = formData.primeiro;
+    cell2.innerText = formData.segundo;
+    cell3.innerText = formData.terceiro;
+    cell4.innerText = formData.quarto;
+    cell5.innerText = formData.quinto;
     cell6.innerHTML = `<button onClick="editar(this)" id="editar"><strong>EDITAR</strong></button>
                        <button onClick="deletar(this)" id="deletar"><strong>DELETAR</strong></button>`;
 }
@@ -59,21 +59,21 @@ function resetar() {
 }
 
 function atualizar(formData) {
-    selectedRow.cells[0].innerHTML = formData.primeiro;
-    selectedRow.cells[1].innerHTML = formData.segundo;
-    selectedRow.cells[2].innerHTML = formData.terceiro;
-    selectedRow.cells[3].innerHTML = formData.quarto;
-    selectedRow.cells[4].innerHTML = formData.quinto;
+    selectedRow.cells[0].innerText = formData.primeiro;
+    selectedRow.cells[1].innerText = formData.segundo;
+    selectedRow.cells[2].innerText = formData.terceiro;
+    selectedRow.cells[3].innerText = formData.quarto;
+    selectedRow.cells[4].innerText = formData.quinto;
 }
 
 function editar(botao) {
     selectedRow = botao.parentElement.parentElement;
 
-    document.getElementById('primeiro').value = selectedRow.cells[0].innerHTML;
-    document.getElementById('segundo').value = selectedRow.cells[1].innerHTML;
-    document.getElementById('terceiro').value = selectedRow.cells[2].innerHTML;
-    document.getElementById('quarto').value = selectedRow.cells[3].innerHTML;
-    document.getElementById('quinto').value = selectedRow.cells[4].innerHTML;
+    document.getElementById('primeiro').value = selectedRow.cells[0].innerText;
+    document.getElementById('segundo').value = selectedRow.cells[1].innerText;
+    document.getElementById('terceiro').value = selectedRow.cells[2].innerText;
+    document.getElementById('quarto').value = selectedRow.cells[3].innerText;
+    document.getElementById('quinto').value = selectedRow.cells[4].innerText;
 
 }
 
