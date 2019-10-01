@@ -46,6 +46,8 @@ function inserir(formData) {
     cell5.innerText = formData.quinto;
     cell6.innerHTML = `<button onClick="editar(this)" id="editar"><strong>EDITAR</strong></button>
                        <button onClick="deletar(this)" id="deletar"><strong>DELETAR</strong></button>`;
+    soma();
+    projetos();
 }
 
 function resetar() {
@@ -64,6 +66,8 @@ function atualizar(formData) {
     selectedRow.cells[2].innerText = formData.terceiro;
     selectedRow.cells[3].innerText = formData.quarto;
     selectedRow.cells[4].innerText = formData.quinto;
+    soma();
+    projetos();
 }
 
 function editar(botao) {
@@ -85,13 +89,26 @@ function deletar(botao) {
         let deletar = selectedRow;
         deletar.parentNode.removeChild(deletar);
     }
+    soma();
+    projetos();
 }
-let total = 0;
+
 function soma() {
-    let teste = document.getElementById('tabela');
-    let rows = teste.rows; 
-    for (let i = 0; i < rows.length+2; i++) {
-        total += rows[i].value;
+    let porcento = 0;
+    let total = 0;
+    let tabela = document.getElementById('tabela');
+    let rows = tabela.rows; 
+    console.log(rows.length - 2);
+    for (let i = 2; i < rows.length; i++) {
+        total += parseFloat(rows[i].cells[2].innerText);
     }
+    porcento = parseFloat(total / 270).toFixed(0);
+    document.getElementById('soma').innerText = "Valor Total: " + total + "/27000" + " " + porcento + "%";
 }
-soma();
+
+function projetos() {
+    let total = 0;
+    let tabela = document.getElementById('tabela');
+    let rows = tabela.rows;
+    document.getElementById('numprojetos').innerText = "Meta de Projetos: " + (rows.length - 2) + "/15";
+}
