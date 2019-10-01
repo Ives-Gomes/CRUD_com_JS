@@ -133,6 +133,16 @@ tr {
     text-align: center;
     color: black;
 }
+
+.footer {
+    background: #F24D9D;
+    position: relative;   
+}
+.img__footer {
+    height: 53px;
+    margin-left: 550px;
+}
+
 @media screen and (max-width: 1150px) {
     .box1 {
         float: none;
