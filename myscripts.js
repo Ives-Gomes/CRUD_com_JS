@@ -98,17 +98,19 @@ function soma() {
     let total = 0;
     let tabela = document.getElementById('tabela');
     let rows = tabela.rows; 
-    console.log(rows.length - 2);
     for (let i = 2; i < rows.length; i++) {
         total += parseFloat(rows[i].cells[2].innerText);
     }
-    porcento = parseFloat(total / 270).toFixed(0);
+    porcento = parseFloat(total / 270).toFixed(1);
     document.getElementById('soma').innerText = "Valor Total: " + total + "/27000" + " " + porcento + "%";
 }
 
 function projetos() {
-    let total = 0;
     let tabela = document.getElementById('tabela');
     let rows = tabela.rows;
-    document.getElementById('numprojetos').innerText = "Meta de Projetos: " + (rows.length - 2) + "/15";
+    document.getElementById('numprojetos').innerText = "Meta de Projetos: " + (rows.length - 2) + "/18";
+}
+
+function buscar() {
+       
 }
