@@ -112,5 +112,18 @@ function projetos() {
 }
 
 function buscar() {
-       
+    let pesquisa = document.getElementById('pesquisa').value;
+    let table = document.getElementById('tabela');
+    
+    for(let i = 2; i < table.rows.length; i++) {
+        let row = table.rows[i];
+        let cell = row.cells[0];
+
+        if(pesquisa == cell.innerText || pesquisa == "") {
+            row.style.display = "table-row";
+        } else {
+            row.style.display = "none";
+        }
+
+    }
 }

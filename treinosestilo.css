@@ -115,6 +115,7 @@ input {
     background: #F24D9D;
     border: 1px solid black;
     width: 100%;
+    border-radius: 10px;
 }
 
 .tabela__1, .tabela__2, .tabela__3, .tabela__4, .tabela__5 {
