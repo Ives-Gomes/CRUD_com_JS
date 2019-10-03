@@ -10,11 +10,27 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-
-#box2 > p:nth-child(2n) {
+.meta {
     font-family: Arial, Helvetica, sans-serif;
     size: 20px;
     color: white;
+}
+#tot, #numprojetos {
+    font-family: Arial, Helvetica, sans-serif;
+    size: 20px;
+    color: red;  
+}
+
+.metas {
+    background: #F24D9D;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }
 
 input {
@@ -25,8 +41,8 @@ input {
 
 .pesquisa {
     font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: 5px;
     float: right;
 } 
@@ -35,7 +51,7 @@ input {
     color: white;
     font-size: 20px;
     margin-left: 650px;
-    margin-top: 8px;
+    margin-top: 23px;
     margin-bottom: 5px;
 }
 
@@ -137,7 +153,9 @@ tr {
 
 .footer {
     background: #F24D9D;
-    position: relative;   
+    position: relative; 
+    animation-name: fade;
+    animation-duration: 1s;  
 }
 .img__footer {
     height: 53px;
@@ -151,4 +169,14 @@ tr {
     .box2 {
         float: none;
     }
+}
+
+.primeiro__input, .segundo__input, .terceiro__input, 
+.quarto__input, .quinto__input, .pesquisa, 
+.metas, .botao{
+    box-shadow: 1px 1px 10px 0px black;
+}
+
+.footer {
+    box-shadow: 1px 1px 20px 1px black;
 }

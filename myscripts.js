@@ -100,15 +100,24 @@ function soma() {
     let rows = tabela.rows; 
     for (let i = 2; i < rows.length; i++) {
         total += parseFloat(rows[i].cells[2].innerText);
-    }
+    } 
+
     porcento = parseFloat(total / 270).toFixed(1);
-    document.getElementById('soma').innerText = "Valor Total: " + total + "/27000" + " " + porcento + "%";
+    document.getElementById('tot').innerText = total + "/27000" + " " + porcento + "%";
+
+    if(total >= 27000) {
+        tot.style.color = "lime";
+    }
 }
 
 function projetos() {
     let tabela = document.getElementById('tabela');
     let rows = tabela.rows;
-    document.getElementById('numprojetos').innerText = "Meta de Projetos: " + (rows.length - 2) + "/18";
+    document.getElementById('numprojetos').innerText = (rows.length - 2) + "/18";
+
+    if(rows.length - 2 >= 18) {
+        numprojetos.style.color = "lime";
+    } 
 }
 
 function buscar() {

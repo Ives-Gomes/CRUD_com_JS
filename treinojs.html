@@ -29,7 +29,7 @@
                         <input class="quinto__input" type="text" id="quinto">
                     </form>
 
-                    <input type="submit" value="Clique" id="botao" onclick="clique()" onsubmit="clique()">
+                    <input type="submit" value="Clique" id="botao" class="botao" onclick="clique()" onsubmit="clique()">
 
                 </td>
             </table>
@@ -59,9 +59,11 @@
 
             </table>
 
-            <p id="soma"></p>
-            <p id="numprojetos"></p>
-            <p id="nummembros"></p>
+            <div class="metas" id="metas">
+                <p class="meta">Valor Total:</p><p id="tot" class="total"></p>
+                <p class="meta">Meta de Projetos:</p><p id="numprojetos"></p>
+            </div>
+            
         </div>
 
        
