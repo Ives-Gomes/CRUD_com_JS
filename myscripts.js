@@ -103,7 +103,7 @@ function soma() {
     } 
 
     porcento = parseFloat(total / 270).toFixed(1);
-    document.getElementById('tot').innerText = total + "/27000" + " " + porcento + "%";
+    document.getElementById('tot').innerText = "R$ " + total + "/27000" + " " + porcento + "%";
 
     if(total >= 27000) {
         tot.style.color = "lime";
